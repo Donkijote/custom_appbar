@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:custom_appbar/core/bottom_clipper.dart';
 import 'package:custom_appbar/core/values.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,12 +16,19 @@ class _HomePageState extends State<HomePage> {
     final Size _size = MediaQuery.of(context).size;
     return Stack(
       children: [
+        Positioned(
+          top: 0,
+          child: SvgPicture.asset(
+            'assets/images/RedOne.svg',
+            height: _size.height * .35,
+          ),
+        ),
         ClipPath(
           clipper: CurvedBottomClipper(),
           child: Container(
             height: _size.height * .30,
             decoration: BoxDecoration(
-              color: appColor,
+              color: Colors.transparent,
             ),
             child: Row(
               children: [

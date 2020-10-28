@@ -7,7 +7,7 @@ class CurvedBottomClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     // I've taken approximate height of curved part of view
     // Change it if you have exact spec for it
-    final roundingHeight = size.height * 3 / 20;
+    final roundingHeight = size.height * 6 / 20;
 
     // this is top part of path, rectangle without any rounding
     final filledRectangle =
@@ -17,7 +17,7 @@ class CurvedBottomClipper extends CustomClipper<Path> {
     // arc is drawn from center of this rectangle, so it's height has to be twice roundingHeight
     // also I made it to go 5 units out of screen on left and right, so curve will have some incline there
     final roundingRectangle = Rect.fromLTRB(
-        -5, size.height - roundingHeight * 2, size.width + 5, size.height);
+        -5, size.height - roundingHeight * 2, size.width + 55, size.height);
 
     final path = Path();
     path.addRect(filledRectangle);
