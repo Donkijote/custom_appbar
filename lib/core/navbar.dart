@@ -53,10 +53,10 @@ class _CustomNavBarState extends State<CustomNavBar>
           children: [
             AnimatedContainer(
               curve: Curves.easeInOut,
-              duration: Duration(milliseconds: 200),
+              duration: Duration(milliseconds: 100),
               alignment: Alignment(widget.items[widget.currentIndex].x, 0.0),
               child: AnimatedContainer(
-                duration: Duration(milliseconds: 200),
+                duration: Duration(milliseconds: 100),
                 height: height * 0.2,
                 width: width * 0.28,
                 decoration: BoxDecoration(
