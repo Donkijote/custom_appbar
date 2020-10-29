@@ -67,7 +67,7 @@ class _TabsPageState extends State<TabsPage> {
           _pageController.animateToPage(
             index,
             duration: Duration(
-              milliseconds: 500,
+              milliseconds: 200,
             ),
             curve: Curves.easeInOut,
           );
