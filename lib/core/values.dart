@@ -28,9 +28,9 @@ MaterialColor primarySwatch = MaterialColor(
   },
 );
 
-class Person {
+class MenuItem {
   final String title;
   final IconData icon;
   final double x;
-  Person({this.title, this.icon, this.x});
+  MenuItem({this.title, this.icon, this.x});
 }

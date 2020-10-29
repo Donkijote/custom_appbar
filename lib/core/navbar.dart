@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class CustomNavBar extends StatefulWidget {
   final ValueChanged<int> onTapChanged;
   final int currentIndex;
-  final List<Person> items;
+  final List<MenuItem> items;
 
   const CustomNavBar({
     Key key,
@@ -19,7 +19,7 @@ class CustomNavBar extends StatefulWidget {
 
 class _CustomNavBarState extends State<CustomNavBar>
     with SingleTickerProviderStateMixin {
-  Person active;
+  MenuItem active;
 
   @override
   void initState() {

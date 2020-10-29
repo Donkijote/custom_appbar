@@ -18,9 +18,6 @@ class _TabsPageState extends State<TabsPage> {
     MailBoxPage(),
     ProfilePage()
   ];
-  PageController _pageController = PageController(
-    initialPage: 0,
-  );
 
   int _selectedPageIndex = 0;
 
@@ -52,49 +49,34 @@ class _TabsPageState extends State<TabsPage> {
           ),
         ],
       ),
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: (page) {
-          setState(() {
-            _selectedPageIndex = page;
-          });
-        },
-        children: [..._pages],
-      ),
+      body: _pages[_selectedPageIndex],
       bottomNavigationBar: CustomNavBar(
         currentIndex: _selectedPageIndex,
         onTapChanged: (index) {
-          _pageController.animateToPage(
-            index,
-            duration: Duration(
-              milliseconds: 150,
-            ),
-            curve: Curves.easeInOut,
-          );
           setState(() {
             _selectedPageIndex = index;
           });
         },
         items: [
-          Person(
+          MenuItem(
             title: 'Inicio',
             icon: Icons.home,
-            x: -.95,
+            x: -0.9,
           ),
-          Person(
+          MenuItem(
             title: 'Academy',
-            icon: Icons.account_balance_outlined,
+            icon: Icons.school,
             x: -0.3,
           ),
-          Person(
+          MenuItem(
             title: 'Buzon',
-            icon: Icons.message_outlined,
+            icon: Icons.question_answer_outlined,
             x: 0.3,
           ),
-          Person(
-            title: 'Perfil',
-            icon: Icons.person,
-            x: .98,
+          MenuItem(
+            title: 'Beneficios',
+            icon: Icons.card_giftcard_outlined,
+            x: 0.9,
           ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
