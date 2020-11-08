@@ -1,9 +1,9 @@
 import 'package:custom_appbar/core/navbar.dart';
 import 'package:custom_appbar/core/values.dart';
 import 'package:custom_appbar/pages/academy.dart';
+import 'package:custom_appbar/pages/benefit.dart';
 import 'package:custom_appbar/pages/home.dart';
 import 'package:custom_appbar/pages/mail_box.dart';
-import 'package:custom_appbar/pages/profile.dart';
 import 'package:flutter/material.dart';
 
 class TabsPage extends StatefulWidget {
@@ -16,7 +16,7 @@ class _TabsPageState extends State<TabsPage> {
     HomePage(),
     AcademyPage(),
     MailBoxPage(),
-    ProfilePage(),
+    BenefitPage(),
   ];
 
   int _selectedPageIndex = 0;
