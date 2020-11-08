@@ -7,7 +7,7 @@ class ProfilePage extends StatelessWidget {
       children: [
         Center(
           child: Text(
-            'Profile page',
+            'Profile Page',
           ),
         ),
       ],

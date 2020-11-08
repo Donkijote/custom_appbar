@@ -7,7 +7,7 @@ const backgroundColor = Color(0xFFF3F5F6);
 const blackColor = Color(0xFF263238);
 
 const colorPrimary = 0xFFD90429;
-const colorSecondary = 0xFF666666;
+const colorSecondary = 0xFFEF233C;
 
 const linkColor = Color(0xFF1891CE);
 const secondaryColor = Color(colorSecondary);

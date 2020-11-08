@@ -16,7 +16,7 @@ class _TabsPageState extends State<TabsPage> {
     HomePage(),
     AcademyPage(),
     MailBoxPage(),
-    ProfilePage()
+    ProfilePage(),
   ];
 
   int _selectedPageIndex = 0;
@@ -43,7 +43,7 @@ class _TabsPageState extends State<TabsPage> {
               horizontal: 10,
             ),
             child: Icon(
-              Icons.notifications_none_outlined,
+              Icons.notifications_none_rounded,
               size: 28,
             ),
           ),
@@ -60,22 +60,22 @@ class _TabsPageState extends State<TabsPage> {
         items: [
           MenuItem(
             title: 'Inicio',
-            icon: Icons.home,
+            icon: Icons.home_rounded,
             x: -0.9,
           ),
           MenuItem(
             title: 'Academy',
-            icon: Icons.school,
+            icon: Icons.school_rounded,
             x: -0.3,
           ),
           MenuItem(
             title: 'Buzon',
-            icon: Icons.question_answer_outlined,
+            icon: Icons.question_answer_rounded,
             x: 0.3,
           ),
           MenuItem(
             title: 'Beneficios',
-            icon: Icons.card_giftcard_outlined,
+            icon: Icons.card_giftcard_rounded,
             x: 0.9,
           ),
         ],

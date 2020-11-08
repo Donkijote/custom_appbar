@@ -47,3 +47,30 @@ class CurvedBottomClipper extends CustomClipper<Path> {
     return true;
   }
 }
+
+class CustomShapeBorder extends ContinuousRectangleBorder {
+  final double borderLeft;
+  final double borderRight;
+  CustomShapeBorder({this.borderLeft = 15.0, this.borderRight = 55});
+  @override
+  Path getOuterPath(Rect rect, {TextDirection textDirection}) {
+    final roundingHeight = rect.height * 10 / 20;
+
+    final filledRectangle =
+        Rect.fromLTRB(0, 0, rect.width, rect.height - roundingHeight);
+
+    final roundingRectangle = Rect.fromLTRB(
+      -borderLeft,
+      rect.height - roundingHeight * 2,
+      rect.width + borderRight,
+      rect.height,
+    );
+
+    Path path = Path();
+    path.addRect(filledRectangle);
+    path.arcTo(roundingRectangle, pi, -pi, true);
+    path.close();
+
+    return path;
+  }
+}
